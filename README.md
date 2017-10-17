@@ -14,7 +14,7 @@ UINavigationController *navController = [[UINavigationController alloc] initWith
 
         Setting->ComanyLogo = @"your companylogo";
         Setting->ComapnyUrl = @"your comapny url";
-        Setting->ComapnySubtitle = @"Pixster Studio";
+        Setting->ComapnySubtitle = @"Company Subtitle";
         Setting->AppsId = 123456789;
         Setting->AppRedirectUrl = @"your url";
         Setting->EmailSubject = @"FeedBack";
