@@ -62,6 +62,28 @@
 */
 
 
+/*
+GET PENDING NOTIFICATION
+center.getPendingNotificationRequests { (notifications) in
+            print("Count: \(notifications.count)")
+                
+            for item in notifications {
+                
+                let id = item.identifier
+                let time = item.content
+                let categoryId = time.categoryIdentifier
+                print(time)
+                print("id: \(id)")
+                guard let trigger = item.trigger as? UNCalendarNotificationTrigger else { return }
+                var day = trigger.dateComponents.weekday
+                let nextFireDate = trigger.nextTriggerDate()
+                let title = item.content.body
+                }
+   }
+
+*/
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     
