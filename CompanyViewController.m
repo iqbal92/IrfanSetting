@@ -83,6 +83,40 @@ center.getPendingNotificationRequests { (notifications) in
 
 */
 
+/*
+        //Attributed text view with privacy policy link (clickable textview)
+
+        let attributedString = NSMutableAttributedString(string: "By continueing you agree terms and conditions and the privacy policy")
+
+        attributedString.addAttribute(.link, value: "https://pixsterstudio.com/privacy-policy.html", range: (attributedString.string as NSString).range(of: "terms and conditions"))
+
+        attributedString.addAttribute(.link, value: "https://pixsterstudio.com/terms-of-use.html", range: (attributedString.string as NSString).range(of: "privacy policy"))
+
+        textview.backgroundColor = UIColor(named: "newBGColor")
+        textview.textAlignment = .center
+        textview.linkTextAttributes = [ NSAttributedString.Key.foregroundColor: UIColor.blue]
+        textview.attributedText = attributedString
+        textview.delegate = self
+        textview.isSelectable = true
+        textview.isEditable = false
+        textview.delaysContentTouches = false
+        textview.isScrollEnabled = false
+        textview.font = UIFont(name: "AvenirNext-Regular", size: 10)
+
+        func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+
+            if URL.scheme == "terms" {
+                print("---- TERMS & CONDITION -----")
+                return false
+            } else  if URL.scheme == "privacy"{
+                print("---- PRIVACY & POLICY -----")
+                 return false
+            }
+            return true
+        }
+
+*/
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
